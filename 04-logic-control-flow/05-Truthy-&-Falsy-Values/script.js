@@ -19,48 +19,43 @@
 const x = function () {};
 
 if (x) {
-    console.log('This is truthy');
+  console.log('This is truthy');
 } else {
-    console.log('this is Falsy');
+  console.log('This is falsy');
 }
 
 console.log(Boolean(x));
 
-//  Truthy and falsy caveats
+// Truthy and falsy caveats
 const children = 0;
 
 if (!isNaN(children)) {
-    console.log(`You have ${children} children`);
+  console.log(`You have ${children} children`);
 } else {
-    console.log('Please enter number of children');
+  console.log('Please enter Number of Children!');
 }
 
 // Checking for empty arrays
+const posts = ['Post One', 'Post Two'];
 
-const posts = ['Post One'];
 if (posts.length > 0) {
-    console.log('List Posts');
+  console.log('List Posts');
 } else {
-    console.log("No Posts To List");
+  console.log('No Posts To List');
 }
 
 // Checking for empty objects
-
 const user = {
-  name: 'Brad',  
+  name: 'Brad',
 };
 
 if (Object.keys(user).length > 0) {
-    console.log('List user');
+  console.log('List user');
 } else {
-    console.log('No User');
+  console.log('No user To List');
 }
 
-//  Loose Equality (==)
-console.log(false == 0);
-console.log('' == 0);
-console.log(null == undefined);
-
+// Loose Equality (==)
 console.log(false === 0);
 console.log('' === 0);
 console.log(null === undefined);

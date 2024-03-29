@@ -1,52 +1,79 @@
 // Method 1
 
-// window.addEventListener('keydown', (e) => {
-//     const insert = document.getElementById('insert');
+/* window.addEventListener('keydown', (e) => {
+  const insert = document.querySelector('#insert');
 
-//     insert.innerHTML = `
-//     <div class="key">
-//         ${e.key === " " ? 'Space' : e.key}
-//     <small>e.key</small>
-//     </div>
-
-//     <div class = "key">
-//         ${e.keyCode}
-//     <small> e.key </small> 
-//         </div>
-
-//         <div class = "key" >
-//             ${e.code}
-//             <small> e.key </small>
-//             </div>
-//     `;
-// })
+  insert.innerHTML = `
+        <div class="key">
+            ${e.key === ' ' ? 'Space' : e.key}
+            <small>e.key</small>
+        </div>
+         <div class="key">
+           ${e.keyCode}
+            <small>e.keyCode</small>
+        </div>
+         <div class="key">
+        ${e.code}
+            <small>e.code</small>
+        </div>
+    `;
+}); */
 
 // Method 2
-
+/* 
 function showKeyCodes(e) {
-    const insert = document.getElementById('insert');
-    insert.innerHTML = "";
+  const insert = document.querySelector('#insert');
 
-    const keyCodes = {
-        'e.key': e.key === " " ? 'Space' : e.key,
-        'e.keyCode': e.keyCode,
-        'e.code': e.code
-    };
+  insert.innerHTML = '';
 
-    for (let key in keyCodes) {
-        const div = document.createElement('div');
-        div.className = 'key';
-        const small = document.createElement('small');
+  const keyCodes = {
+    'e.key': e.key === ' ' ? 'Space' : e.key,
+    'e.keyCode': e.keyCode,
+    'e.code': e.code,
+  };
 
-        const keyText = document.createTextNode(key);
-        const valueText = document.createTextNode(keyCodes[key]);
+  for (let key in keyCodes) {
+    const div = document.createElement('div');
+    div.className = 'key';
+    const small = document.createElement('small');
 
-        small.appendChild(keyText);
-        div.appendChild(valueText);
-        div.appendChild(small);
+    const keyText = document.createTextNode(key);
+    const valueText = document.createTextNode(keyCodes[key]);
 
-        insert.appendChild(div);
-    }
+    small.appendChild(keyText);
+    div.appendChild(valueText);
+    div.appendChild(small);
+
+    insert.appendChild(div);
+  }
+} */
+
+// Method 3
+function showKeyCodes(e) {
+  const insert = document.querySelector('#insert');
+
+  insert.innerHTML = '';
+
+  const keyCodes = new Map([
+    ['e.key', e.key === ' ' ? 'Space' : e.key],
+    ['e.keyCode', e.keyCode],
+    ['e.code', e.code],
+  ]);
+
+  for (let [key, value] of keyCodes) {
+    const div = document.createElement('div');
+    div.className = 'key';
+    const small = document.createElement('small');
+
+    const keyText = document.createTextNode(key);
+    const valueText = document.createTextNode(value);
+
+    small.appendChild(keyText);
+    div.appendChild(valueText);
+    div.appendChild(small);
+
+    insert.appendChild(div);
+  }
 }
 
 window.addEventListener('keydown', showKeyCodes);

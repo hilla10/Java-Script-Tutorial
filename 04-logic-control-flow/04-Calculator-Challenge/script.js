@@ -1,43 +1,28 @@
-function calculator(num1, num2, operator) {
-    let result;
+// Calculator Challenge
 
-    switch(operator) {
-        case '+':
-        result = num1 + num2;
-        break;
-        case '-':
-        result = num1 - num2;
-        break;
-        case '*':
-        result = num1 * num2;
-        break;
-        case '/':
-        result = num1 / num2;
-        break;
-        default: result = "Invalid Operator"
+/* const calculator = (num1, num2, operator) => {
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+
+    case '*':
+      return num1 * num2;
+
+    case '/':
+      return num1 / num2;
+      default:
+          return 'Invalid Operator'
     }
+}; */
 
-    console.log(result);
-    return result;
-}
+const calculator = (num1, num2, operator) => {
+  if (operator === '+') return num1 + num2;
+  if (operator === '-') return num1 - num2;
+  if (operator === '*') return num1 * num2;
+  if (operator === '/') return num1 / num2;
+  else return 'Invalid Operator';
+};
 
-// calculator (5, 2, '/')
-
-function calculators (num3, num4, operator1) {
-
-    let results;
-    if (operator1 === '+') {
-        results = num3 + num4;
-    } else if (operator1 === '-') {
-        results = num3 - num4;
-    } else if (operator1 === '*') {
-        results = num3 * num4;
-    } else if (operator1 === '/') {
-        results = num3 / num4;
-    }
-
-    console.log(results);
-    return results;
-}
-
-calculators (4, 2, '/')
+console.log(calculator(10, 10, '*'));

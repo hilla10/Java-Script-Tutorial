@@ -4,25 +4,22 @@ const checkbox = document.getElementById('checkbox');
 const heading = document.querySelector('h1');
 
 function onInput(e) {
-    heading.textContent = e.target.value;
-};
-
-function onChecked(e) {
-    const isChecked = e.target.checked;
-    heading.textContent = isChecked ? 'Checked' : 'Not Checked';
-};
-
-function onFocus () {
-    console.log('Input is Focused');
-    itemInput.style.outlineStyle = 'solid';
-    itemInput.style.outlineWidth = '2px';
-    itemInput.style.outlineColor = 'red';
+  heading.textContent = e.target.value;
 }
 
-function onBlur () {
-    console.log('Input is not focused');
-    itemInput.style.outlineStyle = 'none';
+function onChecked(e) {
+  const isChecked = e.target.checked;
+  heading.textContent = isChecked ? 'Checked' : 'Not Checked';
+}
 
+function onFocus() {
+  console.log('input is focused');
+  itemInput.style.outline = '2px solid green';
+}
+
+function onBlur() {
+  console.log('input is not focused');
+  itemInput.style.outline = 'none';
 }
 
 itemInput.addEventListener('input', onInput);

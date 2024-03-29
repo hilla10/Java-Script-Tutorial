@@ -1,34 +1,41 @@
 const clearBtn = document.querySelector('#clear');
 
+const clearItem = () => {
+  const itemList = document.querySelector('ul');
+  const items = document.querySelectorAll('li');
+
+  // items.forEach((item) => item.remove());
+
+  // items.forEach((list) => {
+  //   itemList.removeChild(list);
+  // });
+
+  // itemList.innerHTML = '';
+
+  while (itemList.firstChild) {
+    itemList.removeChild(itemList.firstChild);
+  }
+};
+
+clearBtn.addEventListener('click', clearItem);
+
 function onClear() {
-    const itemList = document.querySelector('ul');
-    const items = itemList.querySelectorAll('li');
-
-    // itemList.innerHTML = "";
-
-    // items.forEach((item) => item.remove());
-
-    while (itemList.firstChild) {
-        itemList.removeChild(itemList.firstChild);
-    }
-}   
+  alert('clear Item');
+}
 
 // JavaScript Event Listener
-// clearBtn.onClick = function () {
-//     alert('Clear Items');
-// };
 
-// JavaScript Event Listener
-// clearBtn.onClick = function () {
-//     console.log('Clear Items');
-// };
+/* clearBtn.onclick = function () {
+  alert('clear items');
+};
+ */
 
-// addEventListener()
+// AddEventListener
+/* 
+clearBtn.addEventListener('click', () => alert('Clear Items')); */
 
-// clearBtn.addEventListener('click', () => alert('Clear Items'));
-clearBtn.addEventListener('click', onClear);
+// clearBtn.addEventListener('click', () => console.log('Clear Items'));
 
-// setTimeout(() => clearBtn.removeEventListener('click', onClear), 5000);
-
+// setTimeout(() => clearBtn.addEventListener('click', onClear), 5000);
 
 // setTimeout(() => clearBtn.click(), 5000);

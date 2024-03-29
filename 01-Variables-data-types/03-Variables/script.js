@@ -2,14 +2,14 @@
 
 // var, let, const
 
-let firsName = 'John';
+let firstName = 'John';
 let lastName = 'Doe';
 
-console.log(firsName, lastName);
+console.log(firstName, lastName);
 
 let age = 30;
 
-// console.log(age);
+console.log(age);
 
 // Naming Conventions
 // - Only letters, numbers, underscores and dollar signs
@@ -23,8 +23,7 @@ let age = 30;
 
 // Re-assigning Variables
 
-age = 20
-
+age = 21;
 console.log(age);
 
 let score;
@@ -33,38 +32,37 @@ score = 1;
 
 console.log(score);
 
-if(true) {
-    score = score + 1
+if (true) {
+  score += 1;
 }
 
 console.log(score);
 
 const x = 100;
 
-const arr = [1,2,3,4];
+const arr = [1, 2, 3, 4, 5];
 
-arr.push(5);
+arr.push(6);
 
 console.log(arr);
 
 const person = {
-    name: 'Brad',
+  name: 'Brad',
 };
 
-person.name = 'John';
-
-person.email = 'brad@gmai.com'
+person.name = 'Hayla';
 
 console.log(person);
 
-//  Declare multiple values at once
+person.email = 'hayla@gmail.com';
+
+console.log(person);
+
+// Declare multiple values at once
 let a, b, c;
 
-a = 5;
-b = 6;
-c = 10;
-
-const d = 10, e = 20, f = 30;
-
+const d = 10,
+  e = 20,
+  f = 30;
+console.log(d);
 console.log(a);
-

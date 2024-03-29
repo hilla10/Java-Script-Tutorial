@@ -1,20 +1,21 @@
 // First Example
 
-// function first() {
-//     console.log('first...');
-// }
+/* function first() {
+    console.log('first...');
+}
 
-// function second() {
-//     console.log('second...');
-// }
+function second() {
+    console.log('second...');
+}
 
-// function third() {
-//     console.log('third...');
-// }
+function third() {
+    console.log('third...');
+}
 
-// first();
-// second();
-// third()
+first();
+second();
+third()
+ */
 
 function first() {
     console.log('first...');

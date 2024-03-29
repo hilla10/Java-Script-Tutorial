@@ -1,36 +1,23 @@
+const x = Math.floor(Math.random() * 100 + 1);
 
-const  x = Math.floor(Math.random() * 100 + 1)
+const y = Math.floor(Math.random() * 50 + 1);
 
- const y = Math.floor(Math.random() * 50 + 1);
+// Sum
+const sum = `${x} + ${y} = ${x + y}`;
+console.log(sum);
 
- // Get the sum 
- const sum = x + y;
- const sumOutput = `${x} + ${y} = ${sum}`
- console.log(sumOutput);
- 
-//  Get the difference
-const difference = x - y;
- const differenceOutput = `${x} - ${y} = ${difference}`;
- console.log(differenceOutput);
+// Difference
+const difference = `${x} - ${y} = ${x - y}`;
+console.log(difference);
 
-//  Get Product
+// Product
+const product = `${x} * ${y} = ${x * y}`;
+console.log(product);
 
- const Product = x * y;
- const ProductOutput = `${x} * ${y} = ${Product}`;
-console.log(ProductOutput);
+// Quotient
+const quotient = y !== 0 ? `${x} / ${y} = ${x / y}` : 'Division by zero';
+console.log(quotient);
 
-//   Get quotient
-
-
- const quotient = x / y;
- const quotientOutput = `${x} / ${y} = ${quotient}`;
-console.log(quotientOutput);
-
-//  Module
-
- const reminder = x % y;
- const reminderOutput = `${x}  % ${y} = ${reminder}`;
-console.log(reminderOutput);
-
-
-
+// Reminder
+const reminder = `${x} % ${y} = ${x % y}`;
+console.log(reminder);

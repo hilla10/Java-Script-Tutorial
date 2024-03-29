@@ -1,38 +1,34 @@
 // Loop Through arrays
 
 const items = ['book', 'table', 'chair', 'kite'];
-const users = [{
-        name: 'Brad'
-    },
-    {
-        name: 'Kat'
-    },
-    {
-        name: 'Steve'
-    },
-];
+const users = [{ name: 'brad' }, { name: 'kate' }, { name: 'Steve' }];
 
-// for (const item of items) {
-//     console.log(item);
-// };
+/* for (let item of items) {
+  console.log(item);
+}
+ */
 
-// for (const user of users) {
-//     console.log(user.name);
-// }
+for (const user of users) {
+  console.log(user);
+}
 
-// Loop over strings
-const str = "Hello World"
+// Loop over String
+
+const str = 'Hello World';
 
 for (const letter of str) {
-    console.log(letter);
+  console.log(letter);
 }
 
 // Loop over Maps
 
-const map = new Map();
-map.set('name', 'John');
-map.set('age', 30);
+const map = new Map([
+  ['name', 'John'],
+  ['age', 30],
+]);
+
+console.log(map);
 
 for (const [key, value] of map) {
-    console.log(key, value);
+  console.log(key, value);
 }

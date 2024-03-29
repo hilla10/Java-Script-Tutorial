@@ -1,55 +1,50 @@
 // Default Params
 function registerUser(user = 'Bot') {
-    // if (!user) {
-    //     user = 'Bot'
-    // }
-    return user + ' is registered';
+  //   if (!user) {
+  //     user = 'Bot';
+  //   }
+
+  return user + ' is registered';
 }
 
 console.log(registerUser());
 
-// Rest Params
+// Rest params
 function sum(...numbers) {
-    let total = 0;
+  let total = 0;
 
-    for (const num of numbers) {
-        total += num;
-    }
-
-    return total;
+  for (const num of numbers) {
+    total += num;
+  }
+  return total;
 }
 
-console.log(sum(1, 2, 3, 4, 5, 6, 100));
+console.log(sum(1, 2, 3));
 
-// Objects As params
+// Object as params
 function loginUser(user) {
-    return `The user ${user.name} with the id of ${user.id} is logged in`;
+  return `The user ${user.name} with the id of ${user.id} is logged`;
 }
 
 const user = {
-    id: 1,
-    name: 'John'
+  id: 1,
+  name: 'John',
 };
 
-
 console.log(loginUser(user));
-
 console.log(
-    loginUser ({
-        id: 2,
-        name: 'Sara',
-    })
+  loginUser({
+    id: 2,
+    name: 'Sara',
+  })
 );
 
-
 // Arrays as params
-function getRandom(...arr) {
-    const randomIndex = Math.floor(Math.random() * arr.length);
 
-    const item  = arr[randomIndex];
+function getRandom(arr) {
+  const randomIndex = Math.floor(Math.random() * arr.length);
 
-    console.log(item);
-
+  return arr[randomIndex];
 }
 
-getRandom(1, 2, 3, 5, 6, 7, 8, 9, 10);
+console.log(getRandom([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));

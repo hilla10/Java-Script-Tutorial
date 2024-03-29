@@ -1,17 +1,10 @@
-// this is a single line of code
+console.log('Hell World');
 
-/*
-Multi-line comment
 console.log(100);
 
+console.log(20, 'Hello', true);
 
-console.log('hello World');
-
-console.log(20, 'Hello', true); 
-
-*/
-
-const x = 100
+const x = 100;
 
 console.log(x);
 
@@ -19,19 +12,13 @@ console.error('Alert');
 
 console.warn('Warning');
 
-console.table({name: 'Hayle', email: 'hayle@gmai.com'});
+console.table({ name: 'Brad', email: 'brad@gmail.com' });
 
 console.group('simple');
-
 console.log(x);
-
 console.error('Alert');
-
 console.warn('Warning');
-
 console.groupEnd();
 
-const styles = 'padding: 10px; background-color: white; color: green';
-
-console.log('%cHello World', styles);
-
+const style = 'padding: 10px; background-color: white; color: black';
+console.log('%cHello World', style);

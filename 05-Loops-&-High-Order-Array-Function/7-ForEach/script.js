@@ -1,25 +1,28 @@
-const social = ['Twitter', 'LinkedIn', 'Facebook', 'Instagram'];
+const socials = ['Twitter', 'LinkedIn', 'Facebook', 'Instagram'];
 
-// console.log(social.__proto__);
+// console.log(socials.__proto__);
 
-// social.forEach(function (item) {
-//     console.log(item);
-// });
+// socials.forEach((social) => console.log(social));
 
-// social.forEach((item, index, arr) => console.log(`${index} - ${item}`, arr));
-
+/* socials.forEach((social, index, arr) =>
+  console.log(`${index} - ${social}`, arr)
+); */
 
 function logSocials(social) {
-    console.log(social);
+  console.log(social);
 }
 
-social.forEach(logSocials);
+socials.forEach(logSocials);
 
 const socialObjs = [
-    {name: 'Twitter', url: 'https://twitter.com'},
-    {name: 'Facebook', url: 'https://facebook.com'},
-    {name: 'Linkedin', url: 'https://linkedin.com'},
-    {name: 'Instagram', url: 'https://Instagram.com'},
+  { name: 'Twitter', url: 'https://twitter.com' },
+  { name: 'Facebook', url: 'https://facebook.com' },
+  { name: 'Linkedin', url: 'https://linkedin.com' },
+  { name: 'Instagram', url: 'https://instagram.com' },
 ];
 
-socialObjs.forEach((item) => console.log(item.url));
+socialObjs.forEach((item) => {
+  for (const link in item) {
+    console.log(item[link]);
+  }
+});

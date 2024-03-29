@@ -1,31 +1,33 @@
-const item = document.querySelector('.items');
+const items = document.querySelector('.items');
 
 function createNewItems(item) {
-    const li = document.createElement('li');
-    li.appendChild(document.createTextNode(item));
+  const li = document.createElement('li');
+  li.className = 'item';
 
-   const button = createButton('remove-item btn-link text-red');
+    items.appendChild(li);
+    
+  li.appendChild(document.createTextNode(item));
 
-   li.appendChild(button);
+  const button = createButton('remove-item btn-link text-red');
 
-    document.querySelector('.items').appendChild(li);
+  li.appendChild(button);
 }
 
 function createButton(classes) {
-    const button = document.createElement('button');
-    button.className = classes;
+  const button = document.createElement('button');
+  button.className = classes;
 
-    const icon  = createIcon('fa-solid fa-xmark');
-    button.appendChild(icon)
+  const icon = createIcon('fa-solid fa-xmark');
+  button.appendChild(icon);
 
-    return button;
+  return button;
 }
 
 function createIcon(classes) {
-    const icon = document.createElement('i');
-    icon.className = classes;
-
-    return icon
+  const icon = document.createElement('i');
+  icon.className = classes;
+  return icon;
 }
 
 createNewItems('Cheese');
+createNewItems('Sauce');

@@ -1,14 +1,21 @@
-const anyString = 'developers';
+const myString = 'developer';
 
-myString = anyString;
+let cap;
 
-// Solution One
-myString  = myString.charAt(0).toUpperCase() + myString.substring(1);
-// Solution Two
-myString  = myString[0].toUpperCase() + myString.substring(1);
+// Solution 1:
+cap = myString.charAt(0).toUpperCase() + myString.slice(1);
+// Solution 2
+cap = myString[0].toUpperCase() + myString.substring(1);
+// Solution 2
+cap = `${myString[0].toUpperCase()}${myString.slice(1)}`;
 
-// Solution Three
-myString  = `${myString[0].toUpperCase()}${myString.slice(1)}`;
+console.log(cap);
 
+const str = 'hello world this is uppercase';
 
-console.log(myString);
+const words = str
+  .split(' ')
+  .map((word) => word[0].toUpperCase() + word.slice(1))
+  .join(' ');
+
+console.log(words);

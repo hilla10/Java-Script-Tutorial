@@ -21,18 +21,17 @@ parent.lastElementChild.innerText = 'Child Three';
 const child = document.querySelector('.child');
 
 output = child.parentElement;
-child.parentElement.style.border = "2px solid #ccc";
-child.parentElement.style.padding = "15px";
+child.parentElement.style.border = '2px solid #ccc';
+child.parentElement.style.padding = '10px';
 
-// sibling Elements
-
+// Sibling elements
 const secondItem = document.querySelector('.child:nth-child(2)');
 
 output = secondItem;
 
 output = secondItem.nextElementSibling;
 
-secondItem.nextElementSibling.style.color = "#43d023";
-secondItem.previousElementSibling.style.color = "#2a8fac";
+secondItem.nextElementSibling.style.color = 'green';
+secondItem.previousElementSibling.style.color = 'orange';
 
 console.log(output);

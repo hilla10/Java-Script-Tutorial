@@ -1,23 +1,24 @@
 function first() {
-    const x = 100;
+  const x = 100;
 
-    function second() {
-        const y = 200;
-        console.log(x + y);
-    }
+  function second() {
+    const y = 200;
+    console.log(x + y);
+  }
 
-    second();
+  //   console.log(y);
+  second();
 }
 
 first();
 
-if(true) {
-    const x = 100;
+if (true) {
+  const x = 100;
 
-    if(x === 100) {
-        const y = 200;
-        console.log(x + y);
+  if (x === 100) {
+    const y = 200;
+    console.log(x + y);
     }
-
-    // console.log(y);
+    
+    // console.log(y)
 }

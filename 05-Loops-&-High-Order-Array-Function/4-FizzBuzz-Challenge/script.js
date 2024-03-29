@@ -1,36 +1,40 @@
-// For loop
+/* for (let i = 1; i <= 100; i++) {
+  i % 3 === 0 && i % 5 === 0
+    ? console.log('FizzBuzz ' + i)
+    : i % 3 === 0
+    ? console.log('Fizz ' + i)
+    : i % 5 === 0
+    ? console.log('Buzz ' + i)
+    : '';
+} */
 
-// for (i = 1; i <= 100; i++) {
-//     if (i % 15 === 0) {
+let i = 1;
+/* while (i <= 100) {
+  i % 3 === 0 && i % 5 === 0
+    ? console.log('FizzBuzz ' + i)
+    : i % 3 === 0
+    ? console.log('Fizz ' + i)
+    : i % 5 === 0
+    ? console.log('Buzz ' + i)
+    : '';
+  i++;
+} */
 
-//         console.log('FizzBuzz');
+/* do {
+  i % 3 === 0 && i % 5 === 0
+    ? console.log('FizzBuzz ' + i)
+    : i % 3 === 0
+    ? console.log('Fizz ' + i)
+    : i % 5 === 0
+    ? console.log('Buzz ' + i)
+    : '';
+  i++;
+} while (i <= 100);
+ */
 
-//     } else if (i % 3 === 0) {
-
-//         console.log('Fizz');
-
-//     } else if (i % 5 === 0) {
-
-//         console.log('Buzz');
-
-//     } else {
-
-//         console.log(i);
-//     }
-// }
-
-// While Loop
-
-let j = 1;
-
-while (j <= 100) {
-    console.log(j);
-    if (j % 15 === 0) {
-        console.log('FizzBuzz');
-    } else if (j % 3 === 0) {
-        console.log('Fizz');
-    } else if (j % 5 === 0) {
-        console.log('Buzz');
-    }
-    j++;
+for (let i = 1; i <= 100; i++) {
+  let output = '';
+  if (i % 3 === 0) output += 'Fizz';
+  if (i % 5 === 0) output += 'Buzz';
+  console.log(output || i);
 }

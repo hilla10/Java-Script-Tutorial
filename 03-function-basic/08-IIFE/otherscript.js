@@ -1,2 +1,2 @@
-// const user = 'Hayla';
-// console.log(user);
+const user = 'Hayla';
+console.log(user);
