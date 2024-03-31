@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Sandbox</title>
+</head>
+
+<body>
+    <ul id="people"></ul>
+
+    <script>
+        /*  const person = {
+            name: "Brad",
+            age: 35,
+            address: {
+                street: '5 main st',
+                city: 'Boston'
+            },
+            children: ['Brianna', 'Nicholas']
+        }
+
+        // let person1 = JSON.stringify(person);
+        // person1 = JSON.parse(person1);
+
+        const people = [{
+                name: 'Brad',
+                age: 35,
+            },
+            {
+                name: 'John',
+                age: 40
+            },
+
+            {
+                name: 'Sara',
+                age: 25
+            }
+        ]
+
+        console.log(people[2].name);
+
+        let output = ''
+
+        for (let i = 0; i < people.length; i++) {
+            // console.log(people[i])
+            output += `<li>${people[i].name}</li>`;
+        }
+
+        document.getElementById('people').innerHTML = output */
+
+        const xhttp = new XMLHttpRequest();
+        xhttp.open('GET', 'people.json', true);
+
+        xhttp.onload = () => {
+            if (xhttp.status === 200) {
+                const response = JSON.parse(xhttp.responseText);
+                const people = response.people;
+
+                let output = ''
+
+                for (let i = 0; i < people.length; i++) {
+                    output += `<li>${people[i].name}</li>`;
+                }
+
+                document.getElementById('people').innerHTML = output
+            }
+        };
+
+        xhttp.send();
+    </script>
+</body>
+
+</html>
