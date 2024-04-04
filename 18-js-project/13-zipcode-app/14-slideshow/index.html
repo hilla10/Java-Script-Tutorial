@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideShow</title>
+</head>
+<style>
+    img {
+        object-fit: cover;
+    }
+</style>
+
+<body>
+    <img name="slide" width="400" height="200" />
+
+    <script>
+        // start point
+        let i = 0;
+        const images = [];
+        const time = 3000;
+
+        // Image list
+        images[0] = "https://source.unsplash.com/featured/300x200";
+        images[1] = "https://source.unsplash.com/featured/300x201";
+        images[2] = "https://source.unsplash.com/featured/300x202";
+        images[3] = "https://source.unsplash.com/featured/300x203";
+
+        // change image
+        function changeImg() {
+            document.slide.src = images[i];
+
+            if (i < images.length - 1) {
+                i++
+            } else {
+                i = 0;
+            }
+
+            setTimeout('changeImg()', time);
+        }
+
+        window.onload = changeImg;
+    </script>
+</body>
+
+</html>
